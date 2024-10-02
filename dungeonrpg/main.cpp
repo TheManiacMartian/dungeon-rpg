@@ -1,13 +1,24 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 int main()
 {
 	// setup window class
 	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
 
-	// make a circle and make it blue
-	sf::CircleShape coolCircle(200.0f);
-	coolCircle.setFillColor(sf::Color::Blue);
+	// make a dog
+
+	// get the texture
+	sf::Texture dogTexture;
+	if (!dogTexture.loadFromFile("assets/sprites/dog.png")) {
+		// we did not find the image
+		printf("Could not find image");
+	}
+
+	// get the sprite
+	sf::Sprite dogSprite;
+	dogSprite.setTexture(dogTexture);
+	dogSprite.setScale(sf::Vector2f(3.0f, 3.0f));
 
 	// loop as long as window is open
 	while (window.isOpen())
@@ -27,7 +38,7 @@ int main()
 			window.clear();
 
 			// draw circle onto window
-			window.draw(coolCircle);
+			window.draw(dogSprite);
 
 			// render the window
 			window.display();
