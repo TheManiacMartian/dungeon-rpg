@@ -139,13 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="lib\sfx\BitmapText.cpp" />
+    <ClCompile Include="lib\sfx\BitmapFont.cpp" />
+    <ClCompile Include="lib\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\sprites\dog.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\fonts\monogram.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\sfx\BitmapText.h" />
+    <ClInclude Include="lib\sfx\BitmapFont.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "sfx/BitmapText.h"
 
 int main()
 {
@@ -15,8 +16,8 @@ int main()
 	// testing out text
 
 	// load font
-	sf::Font pixelFont;
-	if (!pixelFont.loadFromFile("assets/fonts/monogram.ttf")) {
+	sfx::BitmapFont pixelFont;
+	if (!pixelFont.loadFromFile("assets/fonts/monogram_new.png")) {
 		// error, font not found
 		printf("Could not find font.");
 	}
@@ -24,14 +25,18 @@ int main()
 		printf("Font was found.");
 
 	}
+	// set glyph size of font
+	pixelFont.setGlyphSize(6, 12);
 
 	// create text from font
-	sf::Text helloWorldText;
+	sfx::BitmapText helloWorldText;
 	
 	// set text properties
+	helloWorldText.setPosition(sf::Vector2f(5.f, 240.f));
 	helloWorldText.setFont(pixelFont);
 	helloWorldText.setString("Hello World! This is a test.");
-	helloWorldText.setCharacterSize(8);
+	helloWorldText.setCharacterScale(2);
+	helloWorldText.setTabSize(2);
 	helloWorldText.setFillColor(sf::Color::White);
 	
 
@@ -69,7 +74,7 @@ int main()
 			}
 
 			// clear window pixels
-			window.clear();
+			window.clear(sf::Color::Blue);
 
 			// draw dog onto window
 			window.draw(dogSprite);
