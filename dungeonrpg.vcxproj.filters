@@ -19,6 +19,9 @@
     <Filter Include="Resource Files\Sprites">
       <UniqueIdentifier>{d7a93d4d-61d1-484d-82e8-05ca859f8996}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Fonts">
+      <UniqueIdentifier>{25c912ff-b33a-473e-b6b0-5a694c209677}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -29,5 +32,10 @@
     <Image Include="assets\sprites\dog.png">
       <Filter>Resource Files\Sprites</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\monogram.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>

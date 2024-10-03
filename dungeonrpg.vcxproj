@@ -144,6 +144,9 @@
   <ItemGroup>
     <Image Include="assets\sprites\dog.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\monogram.ttf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
